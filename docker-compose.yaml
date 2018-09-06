@@ -1,0 +1,16 @@
+version: "3"
+services:
+  mongodb:
+    image: mongo:3.6.2
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=UycjvlH5R54cJHfy44XGbvtXfGtXKweQ
+    ports:
+      - "27017:27017"
+    logging:
+      driver: json-file
+      options:
+        max-size: "20m"
+        max-file: "5"
+    volumes:
+      - ~/mongodb_data:/data/db
