@@ -22,6 +22,10 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-c
 sudo chmod +x /usr/local/bin/docker-compose;
 ```
 
+### Habilitar as credenciais para fazer pull das imagens do docker registry do google
+
+Pesquisar na internet
+
 ### Instalando o mongodb client
 
 ```
