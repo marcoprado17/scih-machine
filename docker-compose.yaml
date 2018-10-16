@@ -1,5 +1,14 @@
 version: "3"
 services:
+  api-gateway:
+    image: gcr.io/smart-car-insurance-hybrid/api-gateway:latest
+    ports:
+      - "81:3000"
+    logging:
+      driver: json-file
+      options:
+        max-size: "20m"
+        max-file: "5"
   mongodb:
     image: mongo:3.6.2
     environment:

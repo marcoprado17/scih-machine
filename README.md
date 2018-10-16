@@ -34,5 +34,5 @@ sudo apt-get install -y mongodb-org-shell;
 ### Logar no mongo com o mongo client:
 
 ```
-mongo --authenticationDatabase admin -u root -p UycjvlH5R54cJHfy44XGbvtXfGtXKweQ 35.224.88.88:27017
+mongo --authenticationDatabase admin -u root -p UycjvlH5R54cJHfy44XGbvtXfGtXKweQ 35.232.243.78:27017
 ```
