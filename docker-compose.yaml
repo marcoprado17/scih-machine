@@ -3,15 +3,15 @@ services:
   ui-service:
     image: gcr.io/smart-car-insurance-hybrid/ui-service:latest
     ports:
-      - "80:9001"
+      - "80:8080"
   api-gateway:
     image: gcr.io/smart-car-insurance-hybrid/api-gateway:latest
     ports:
-      - "81:3000"
+      - "81:8181"
   gps-service:
     image: gcr.io/smart-car-insurance-hybrid/gps-service:latest
     ports:
-      - "82:8080"
+      - "82:8282"
   mongodb:
     image: mongo:3.6.2
     environment:
