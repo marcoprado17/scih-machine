@@ -8,10 +8,18 @@ services:
     image: gcr.io/smart-car-insurance-hybrid/api-gateway:latest
     ports:
       - "81:8181"
+    links:
+      - gps-service
+      - gps-service:gps
+      - gpsservice
   gps-service:
     image: gcr.io/smart-car-insurance-hybrid/gps-service:latest
     ports:
       - "82:8282"
+  gpsservice:
+    image: gcr.io/smart-car-insurance-hybrid/gps-service:latest
+    ports:
+      - "83:8282"
   mongodb:
     image: mongo:3.6.2
     environment:
