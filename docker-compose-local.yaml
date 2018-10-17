@@ -1,0 +1,25 @@
+version: "3"
+services:
+  ui-service:
+    build: /home/marco/nodejs/scih-ui-service/devops/Dockerfile
+    ports:
+      - "80:8080"
+  api-gateway:
+    image: gcr.io/smart-car-insurance-hybrid/api-gateway:latest
+    ports:
+      - "81:8181"
+    links:
+      - gps-service
+  gps-service:
+    image: gcr.io/smart-car-insurance-hybrid/gps-service:latest
+    ports:
+      - "82:8282"
+  mongodb:
+    image: mongo:3.6.2
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=UycjvlH5R54cJHfy44XGbvtXfGtXKweQ
+    ports:
+      - "27017:27017"
+    volumes:
+      - ~/mongodb_data:/data/db
