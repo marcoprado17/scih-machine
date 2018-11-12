@@ -78,19 +78,20 @@ def generate_plots(file_name, n_gps):
             i += 4
 
         generate_cpu_plot("gps-service", "GPS Service", gps_service_rows, n_gps)
-        generate_cpu_plot("api-gateway", "API Gateway", api_gateway_rows, n_gps)
+        generate_cpu_plot("api-gateway", "API Gateway (sem verificar a assinatura)", api_gateway_rows, n_gps)
         generate_cpu_plot("mongodb", "MongoDB", mongodb_rows, n_gps)
         generate_cpu_plot("ui-server", "UI Server", ui_rows, n_gps)
         generate_cpu_plot("all-services", "Todos os serviços", total_rows, n_gps)
 
         generate_mem_plot("gps-service", "GPS Service", gps_service_rows, n_gps)
-        generate_mem_plot("api-gateway", "API Gateway", api_gateway_rows, n_gps)
+        generate_mem_plot("api-gateway", "API Gateway (sem verificar a assinatura)", api_gateway_rows, n_gps)
         generate_mem_plot("mongodb", "MongoDB", mongodb_rows, n_gps)
         generate_mem_plot("ui-server", "UI Server", ui_rows, n_gps)
         generate_mem_plot("all-services", "Todos os serviços", total_rows, n_gps)
 
-generate_plots("8x1.csv", 8)
-generate_plots("8x10.csv", 80)
-generate_plots("8x11.csv", 88)
-generate_plots("8x12.csv", 96)
-generate_plots("8x15.csv", 120)
+# generate_plots("8x1.csv", 8)
+# generate_plots("8x10.csv", 80)
+# generate_plots("8x11.csv", 88)
+# generate_plots("8x12.csv", 96)
+# generate_plots("8x15.csv", 120)
+generate_plots("without_sign_check.csv", "120")
